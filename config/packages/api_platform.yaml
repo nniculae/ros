@@ -1,0 +1,10 @@
+# api/config/packages/api_platform.yaml
+api_platform:
+  swagger:
+    api_keys:
+      JWT:
+        name: Authorization
+        type: header
+  exception_to_status:
+    App\Exception\UserAlreadyExistsException: 409
+    Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException: 403

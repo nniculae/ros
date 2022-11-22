@@ -1,0 +1,7 @@
+symfony new api-jwt-demo
+cd api-jwt-demo
+composer req doctrine api "lexik/jwt-authentication-bundle"
+composer req --dev maker symfony/test-pack symfony/profiler-pack
+
+
+bin/console lexik:jwt:generate-keypair
