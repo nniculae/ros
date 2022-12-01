@@ -11,6 +11,7 @@ use App\Factory\OrderItemFactory;
 use App\Factory\PaymentFactory;
 use App\Factory\ProductFactory;
 use App\Factory\UserFactory;
+use App\Security\Role;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
@@ -19,6 +20,11 @@ final class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         UserFactory::createMany(9);
+        UserFactory::createOne([
+            'email' => 'niculae@rolling.nl',
+            'password' => '123_secret',
+            'roles' => [Role::ROLE_ADMIN],
+        ]);
 
         AddressFactory::createMany(
             9,

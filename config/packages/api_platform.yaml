@@ -8,3 +8,6 @@ api_platform:
   exception_to_status:
     App\Exception\UserAlreadyExistsException: 409
     Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException: 403
+  title: 'Restaurant Ordering System'
+  description: 'This is an incomplete API based on API Platform en Symfony.'
+  version: '1.0.0-alpha'
